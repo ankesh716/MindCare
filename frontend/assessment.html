@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assessment | MindCare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">MindCare</div>
+    <a href="home.html" class="nav-btn">Home</a>
+</header>
+
+<div class="slide-wrapper">
+
+    <!-- Progress Bar -->
+    <div class="progress-top">
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-label" id="progressLabel">1 of 11</span>
+    </div>
+
+    <!-- Slides -->
+    <div class="slide-container" id="slideContainer">
+
+        <div class="slide active" data-index="0">
+            <p class="q-number">Question 1</p>
+            <h2 class="q-text">How was your morning today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q1" data-value="1">😊 Great — felt fresh and ready</button>
+                <button class="option-btn" data-name="q1" data-value="3">😐 Okay — nothing special</button>
+                <button class="option-btn" data-name="q1" data-value="6">😟 Rushed and a bit stressed</button>
+                <button class="option-btn" data-name="q1" data-value="9">😞 Terrible — didn't want to get up</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="1">
+            <p class="q-number">Question 2</p>
+            <h2 class="q-text">How many hours did you sleep last night?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q2" data-value="1">😊 7–9 hours — slept really well</button>
+                <button class="option-btn" data-name="q2" data-value="3">😐 5–6 hours — okay but not great</button>
+                <button class="option-btn" data-name="q2" data-value="6">😟 3–4 hours — quite tired today</button>
+                <button class="option-btn" data-name="q2" data-value="9">😞 Less than 3 hours — barely slept</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="2">
+            <p class="q-number">Question 3</p>
+            <h2 class="q-text">Did you enjoy your meals today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q3" data-value="1">😊 Yes, ate well and enjoyed it</button>
+                <button class="option-btn" data-name="q3" data-value="3">😐 Ate but didn't really enjoy</button>
+                <button class="option-btn" data-name="q3" data-value="6">😟 Skipped a meal or two</button>
+                <button class="option-btn" data-name="q3" data-value="9">😞 Barely ate anything</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="3">
+            <p class="q-number">Question 4</p>
+            <h2 class="q-text">How did you feel while talking to people today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q4" data-value="1">😊 Happy and comfortable</button>
+                <button class="option-btn" data-name="q4" data-value="3">😐 Normal, nothing special</button>
+                <button class="option-btn" data-name="q4" data-value="6">😟 Didn't feel like talking much</button>
+                <button class="option-btn" data-name="q4" data-value="9">😞 Avoided everyone completely</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="4">
+            <p class="q-number">Question 5</p>
+            <h2 class="q-text">Were you able to focus on your work or studies today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q5" data-value="1">😊 Yes, very focused and productive</button>
+                <button class="option-btn" data-name="q5" data-value="3">😐 Somewhat focused</button>
+                <button class="option-btn" data-name="q5" data-value="6">😟 Kept getting distracted</button>
+                <button class="option-btn" data-name="q5" data-value="9">😞 Could not focus at all</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="5">
+            <p class="q-number">Question 6</p>
+            <h2 class="q-text">Did anything make you smile or laugh today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q6" data-value="1">😊 Yes, had a really good laugh</button>
+                <button class="option-btn" data-name="q6" data-value="3">😐 A little smile here and there</button>
+                <button class="option-btn" data-name="q6" data-value="6">😟 Not really</button>
+                <button class="option-btn" data-name="q6" data-value="9">😞 Nothing at all felt good</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="6">
+            <p class="q-number">Question 7</p>
+            <h2 class="q-text">How did you feel when something went wrong today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q7" data-value="1">😊 Handled it calmly</button>
+                <button class="option-btn" data-name="q7" data-value="3">😐 Got a bit upset but recovered</button>
+                <button class="option-btn" data-name="q7" data-value="6">😟 Got quite frustrated or sad</button>
+                <button class="option-btn" data-name="q7" data-value="9">😞 Felt like everything is falling apart</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="7">
+            <p class="q-number">Question 8</p>
+            <h2 class="q-text">Did you do anything for yourself today? (hobby, walk, rest)</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q8" data-value="1">😊 Yes, took time for myself</button>
+                <button class="option-btn" data-name="q8" data-value="3">😐 A little bit</button>
+                <button class="option-btn" data-name="q8" data-value="6">😟 Was too busy</button>
+                <button class="option-btn" data-name="q8" data-value="9">😞 No time or no interest</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="8">
+            <p class="q-number">Question 9</p>
+            <h2 class="q-text">How are you feeling right now at this moment?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q9" data-value="1">😊 Good and relaxed</button>
+                <button class="option-btn" data-name="q9" data-value="3">😐 Just okay</button>
+                <button class="option-btn" data-name="q9" data-value="6">😟 A bit tired or low</button>
+                <button class="option-btn" data-name="q9" data-value="9">😞 Very drained or upset</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="9">
+            <p class="q-number">Question 10</p>
+            <h2 class="q-text">Did you feel like anyone understood you today?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q10" data-value="1">😊 Yes, felt connected with someone</button>
+                <button class="option-btn" data-name="q10" data-value="3">😐 Somewhat</button>
+                <button class="option-btn" data-name="q10" data-value="6">😟 Not really</button>
+                <button class="option-btn" data-name="q10" data-value="9">😞 Felt completely alone</button>
+            </div>
+        </div>
+
+        <div class="slide" data-index="10">
+            <p class="q-number">Question 11</p>
+            <h2 class="q-text">How are you feeling about tomorrow?</h2>
+            <div class="options">
+                <button class="option-btn" data-name="q11" data-value="1">😊 Excited and looking forward to it</button>
+                <button class="option-btn" data-name="q11" data-value="3">😐 It's fine, just another day</button>
+                <button class="option-btn" data-name="q11" data-value="6">😟 A little worried</button>
+                <button class="option-btn" data-name="q11" data-value="9">😞 Dreading it completely</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="slide-nav">
+        <button class="nav-arrow" id="prevBtn" onclick="prevSlide()" disabled>← Back</button>
+        <button class="nav-arrow" id="nextBtn" onclick="nextSlide()" disabled>Next →</button>
+        <button class="submit-btn" id="submitBtn" onclick="submitAnswers()" style="display:none">See My Result</button>
+    </div>
+
+</div>
+
+<script src="assessment.js"></script>
+</body>
+</html>

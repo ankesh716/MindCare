@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ── Navbar ── */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.nav-btn {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4f46e5;
+    border: 1.5px solid #4f46e5;
+    padding: 7px 20px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.nav-btn:hover { background: #4f46e5; color: white; }
+
+/* ── Hero ── */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 85vh;
+    padding: 40px 20px;
+}
+.hero-content { max-width: 560px; }
+.hero-content h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+.hero-content p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* ── Buttons ── */
+.primary-btn {
+    display: inline-block;
+    padding: 13px 34px;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.primary-btn:hover { background: #4338ca; }
+
+.secondary-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: white;
+    color: #4f46e5;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1.5px solid #4f46e5;
+    margin-top: 16px;
+    transition: 0.2s;
+}
+.secondary-btn:hover { background: #f0f0ff; }
+
+/* ── Slide Wrapper ── */
+.slide-wrapper {
+    max-width: 580px;
+    margin: 40px auto 60px;
+    padding: 0 16px;
+}
+
+/* ── Top Progress ── */
+.progress-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+.progress-track {
+    flex: 1;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    width: 10%;
+    background: #4f46e5;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+.progress-label {
+    font-size: 13px;
+    color: #9ca3af;
+    white-space: nowrap;
+}
+
+/* ── Slide Card ── */
+.slide-container {
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 40px 36px 32px;
+    min-height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    animation: slideIn 0.35s ease;
+}
+.slide.active { display: block; }
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(30px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.q-number {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.q-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e1b4b;
+    line-height: 1.4;
+    margin-bottom: 28px;
+}
+
+/* ── Option Buttons ── */
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-btn {
+    width: 100%;
+    text-align: left;
+    padding: 13px 18px;
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.option-btn:hover {
+    border-color: #4f46e5;
+    background: #f0f0ff;
+    color: #4f46e5;
+}
+.option-btn.selected {
+    border-color: #4f46e5;
+    background: #4f46e5;
+    color: white;
+}
+
+/* ── Slide Navigation ── */
+.slide-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+.nav-arrow {
+    padding: 10px 24px;
+    border: 1.5px solid #d1d5db;
+    background: white;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.nav-arrow:hover:not(:disabled) {
+    border-color: #4f46e5;
+    color: #4f46e5;
+}
+.nav-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.submit-btn {
+    padding: 11px 28px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.submit-btn:hover { background: #4338ca; }
+
+/* ── Result Page ── */
+.result-wrapper {
+    max-width: 500px;
+    margin: 50px auto 60px;
+    background: white;
+    padding: 40px 36px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-align: center;
+}
+.result-wrapper h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin-bottom: 24px;
+}
+.result-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease;
+}
+.result-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e1b4b;
+    margin-bottom: 10px;
+}
+.result-card p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 6px;
+}
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    margin-top: 16px;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+.disclaimer {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 16px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+    .navbar { padding: 14px 20px; }
+    .slide-container { padding: 28px 20px 24px; }
+    .q-text { font-size: 17px; }
+    .result-wrapper { margin: 20px 16px 40px; padding: 28px 20px; }
+}
